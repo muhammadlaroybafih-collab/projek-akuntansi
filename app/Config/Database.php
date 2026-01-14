@@ -22,12 +22,13 @@ class Database extends Config
     /**
      * The default database connection (InfinityFree Online).
      */
-    public array $default = [
+  public array $default = [
         'DSN'          => '',
-        'hostname'     => 'sql203.infinityfree.com',
-        'username'     => 'if0_40900131',
-        'password'     => 'asahina1109',
-        'database'     => 'if0_40900131_db_akuntansi_ukm',
+        // Dia bakal baca Key yang lo buat di Vercel tadi (pake underscore)
+        'hostname'     => 'gateway01.ap-southeast-1.prod.aws.tidbcloud.com',
+        'username'     => '4QUkCvGshHqHu6bi.root',
+        'password'     => 'JAKUVwH6L5mHToCT',
+        'database'     => 'test',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
@@ -39,7 +40,7 @@ class Database extends Config
         'compress'     => false,
         'strictOn'     => false,
         'failover'     => [],
-        'port'         => 3306,
+        'port'         => 4000, // WAJIB 4000 buat TiDB
         'numberNative' => false,
         'foundRows'    => false,
         'dateFormat'   => [
